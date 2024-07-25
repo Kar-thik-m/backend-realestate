@@ -16,10 +16,7 @@ const cloudMongoUrl=`mongodb+srv://${username}:${password}@${clusterName}/${dbNa
 
 const connectToDb = async () => {
     try {
-        await mongoose.connect(cloudMongoUrl,
-            {
-                useNewUrlParser: true,
-            });
+        await mongoose.connect(cloudMongoUrl);
         console.log("db Connecter successfully");
     } catch (err) {
         console.log(err);
